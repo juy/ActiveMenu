@@ -1,0 +1,30 @@
+{
+    "name": "juy/active-menu",
+    "description": "The helper class for Laravel applications to get active class base on current route",
+    "license": "MIT",
+    "type": "library",
+    "homepage": "https://github.com/juy/ActiveMenu",
+    "authors": [
+        {
+            "name": "Sevdin Filiz",
+            "email": "sevdin.filiz@gmail.com",
+            "homepage": "http://www.juysoft.com",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "https://github.com/juy/ActiveMenu/issues",
+        "docs": "https://github.com/juy/ActiveMenu/blob/master/README.md"
+    },
+    "require": {
+        "illuminate/support": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Juy\\ActiveMenu\\": "src/"
+        },
+        "files": [
+            "src/helpers.php"
+        ]
+    }
+}
