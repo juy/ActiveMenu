@@ -12,7 +12,7 @@ You'll need to install the [Composer package](https://packagist.org/packages/juy
 Add this package to your `composer.json` file and run `composer update` once.
 
 ```json
-"juy/active-menu": "dev-master",
+"juy/active-menu": "1.*",
 ```
 
 Append this line to your service providers array in `config/app.php`.
