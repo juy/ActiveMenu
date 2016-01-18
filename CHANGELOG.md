@@ -1,6 +1,10 @@
 # Changelog
 
-All Notable changes to `ActiveMenu` will be documented in this file
+All Notable changes to `ActiveMenu` will be documented in this file.
+
+## Unreleased
+
+- Modify README, add real life usage
 
 ## 1.0.2
 

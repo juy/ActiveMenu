@@ -64,6 +64,14 @@ active_route(['route.name1.*', 'route.name2.*']);
 
 ```
 
+Real life usage
+
+```php
+<li class="{{ active_route('admin.index') }}">
+    <a href="admin/index">Dashboard</a>
+</li>
+```
+
 ----------
 
 ### License
