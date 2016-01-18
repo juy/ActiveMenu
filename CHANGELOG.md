@@ -1,6 +1,6 @@
-# Changelog
+# Change log
 
-All Notable changes to `ActiveMenu` will be documented in this file.
+All notable changes to this project will be documented in this file.
 
 ## Unreleased
 
@@ -8,11 +8,11 @@ All Notable changes to `ActiveMenu` will be documented in this file.
 
 ## 1.0.2
 
-- Change helper function active_class() to active_route() 
+- Change helper function active_class() to active_route()
 
 ## 1.0.1
 
-- Modify Readme
+- Modify README
 
 ## 1.0.0
 
