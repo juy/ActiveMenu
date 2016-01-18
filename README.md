@@ -44,7 +44,7 @@ app('active')->route('route.name');
 Helper function
 
 ```php
-active_class('route.name');
+active_route('route.name');
 ```
 
 Wildcard
@@ -52,7 +52,7 @@ Wildcard
 ```php
 Active::route('route.name.*');
 app('active')->route('route.name.*');
-active_class('route.name.*');
+active_route('route.name.*');
 ```
 
 Multi route with wilcard
@@ -60,7 +60,7 @@ Multi route with wilcard
 ```php
 Active::route(['route.name1.*', 'route.name2.*']);
 app('active')->route(['route.name1.*', 'route.name2.*']);
-active_class(['route.name1.*', 'route.name2.*']);
+active_route(['route.name1.*', 'route.name2.*']);
 
 ```
 
