@@ -1,5 +1,5 @@
 # Active Menu laravel package
-[![Laravel](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.2-orange.svg?style=flat-square)](http://laravel.com)
 
 > Helper class for Laravel applications to get active class base on current route name *(only detect route name not URI, URL, etc.)*.
 
@@ -62,6 +62,14 @@ Active::route(['route.name1.*', 'route.name2.*']);
 app('active')->route(['route.name1.*', 'route.name2.*']);
 active_route(['route.name1.*', 'route.name2.*']);
 
+```
+
+Real life usage
+
+```php
+<li class="{{ active_route('admin.index') }}">
+    <a href="admin/index">Dashboard</a>
+</li>
 ```
 
 ----------
