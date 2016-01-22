@@ -2,9 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## Unreleased
+## 1.0.3
 
 - Modify README, add real life usage
+- Test on laravel 5.2 and add laravel 5.2 badge
 
 ## 1.0.2
 
