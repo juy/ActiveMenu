@@ -2,7 +2,7 @@
 
 [![Laravel](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.2-orange.svg?style=flat-square)](http://laravel.com)
 
-> Helper class for Laravel applications to get active class base on current route name *(only detect route name not URI, URL, etc.)*.
+> Helper class for Laravel applications to get active class base on current route name *(only detect route name not URL)*.
 
 ----------
 
@@ -16,21 +16,21 @@ Add this package to your `composer.json` file and run `composer update` once.
 "juy/active-menu": "1.*",
 ```
 
-Append this line to your service providers array in `config/app.php`.
+Append this line to your **service providers** array in `config/app.php`.
 
 ```php
 Juy\ActiveMenu\ServiceProvider::class,
 ```
 
-Append this line to your aliases array in `config/app.php`.
+Append this line to your **aliases** array in `config/app.php`.
 
 ```php
 'Active' => Juy\ActiveMenu\Facades\Active::class,
 ```
 
-## Usage
+## Usage, samples
 
-Alias
+Alias/Facade
 
 ```php
 Active::route('route.name');
@@ -48,11 +48,16 @@ Helper function
 active_route('route.name');
 ```
 
-Wildcard
+You can modify css active class with custom one (default is 'active')
+
+```php
+active_route('admin.dropdown', 'open')
+```
+
+Wildcard samples
 
 ```php
 Active::route('route.name.*');
-app('active')->route('route.name.*');
 active_route('route.name.*');
 ```
 
@@ -60,7 +65,6 @@ Multi route with wilcard
 
 ```php
 Active::route(['route.name1.*', 'route.name2.*']);
-app('active')->route(['route.name1.*', 'route.name2.*']);
 active_route(['route.name1.*', 'route.name2.*']);
 
 ```
@@ -69,6 +73,14 @@ Real life usage
 
 ```php
 <li class="{{ active_route('admin.index') }}">
+    <a href="admin/index">Dashboard</a>
+</li>
+```
+
+Real life usage with custom css class
+
+```php
+<li class="{{ active_route('admin.index', 'open') }}">
     <a href="admin/index">Dashboard</a>
 </li>
 ```
