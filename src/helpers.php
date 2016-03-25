@@ -7,11 +7,12 @@ if (!function_exists('active_route'))
      * If route matches given route (or array of routes) return active
      *
      * @param $route
+     * @param string $class
      *
      * @return string
      */
-    function active_route($route)
+    function active_route($route, $class = 'active')
     {
-        return app('active')->route($route);
+        return app('active')->route($route, $class);
     }
 }
