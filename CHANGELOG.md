@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.4
+
+- Add custom class name to helper function
+
 ## 1.0.3
 
 - Modify README, add real life usage
