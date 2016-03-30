@@ -7,16 +7,6 @@ use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 class ServiceProvider extends IlluminateServiceProvider
 {
     /**
-     * Perform post-registration booting of services.
-     *
-     * @return void
-     */
-    public function boot()
-    {
-
-    }
-
-    /**
      * Register the application services
      *
      * @return void
@@ -26,5 +16,15 @@ class ServiceProvider extends IlluminateServiceProvider
         $this->app->singleton('active', function ($app) {
             return new Active($app['router']->current()->getName());
         });
+    }
+    
+    /**
+     * Perform post-registration booting of services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
     }
 }
