@@ -7,7 +7,7 @@ use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 class ServiceProvider extends IlluminateServiceProvider
 {
     /**
-     * Bootstrap the application services
+     * Perform post-registration booting of services.
      *
      * @return void
      */
