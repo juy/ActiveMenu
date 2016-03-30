@@ -1,6 +1,6 @@
 {
     "name": "juy/active-menu",
-    "description": "The helper class for Laravel applications to get active class base on current route",
+    "description": "The helper class for Laravel applications to get active class base on current route name",
     "keywords": ["laravel", "active", "menu", "class"],
     "license": "MIT",
     "type": "library",
