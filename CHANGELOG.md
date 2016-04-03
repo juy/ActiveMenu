@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file.
 
-## Development
+## 1.0.5
 
 - Modify README
 - Fix description on composer.json
