@@ -8,7 +8,7 @@
 
 ## Installation
 
-You'll need to install the [Composer package](https://packagist.org/packages/juy/active-menu) from Packagist.
+### Composer package
 
 Add this package to your `composer.json` file and run `composer update` once.
 
@@ -16,16 +16,28 @@ Add this package to your `composer.json` file and run `composer update` once.
 "juy/active-menu": "1.*",
 ```
 
+### Service provider
+
 Append this line to your **service providers** array in `config/app.php`.
 
 ```php
 Juy\ActiveMenu\ServiceProvider::class,
 ```
 
+### Alias
+
 Append this line to your **aliases** array in `config/app.php`.
 
 ```php
 'Active' => Juy\ActiveMenu\Facades\Active::class,
+```
+
+### Publish config
+
+Publish config file.
+
+```
+php artisan vendor:publish --provider="Juy\Providers\CharacterSolver" --tag="config"
 ```
 
 ## Usage, samples
