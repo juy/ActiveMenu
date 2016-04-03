@@ -2,6 +2,13 @@
 
 All notable changes to this project will be documented in this file.
 
+## 1.0.5
+
+- Modify README
+- Fix description on composer.json
+- Change require section on composer.json
+- Change method sequence on ServiceProvider file
+
 ## 1.0.4
 
 - Add custom class name to helper function
