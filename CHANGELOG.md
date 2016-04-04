@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
+## Development
+
+- Modify README, remove comma from composer.json part
+
 ## 1.0.5
 
 - Modify README
