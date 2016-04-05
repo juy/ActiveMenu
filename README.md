@@ -13,7 +13,7 @@
 Add this package to your `composer.json` file and run `composer update` once.
 
 ```json
-"juy/active-menu": "1.*",
+"juy/active-menu": "1.*"
 ```
 
 ### Service provider
@@ -37,7 +37,7 @@ Append this line to your **aliases** array in `config/app.php`.
 Publish config file.
 
 ```
-php artisan vendor:publish --provider="Juy\Providers\ServiceProvider" --tag="config"
+php artisan vendor:publish --provider="Juy\ActiveMenu\ServiceProvider" --tag="config"
 ```
 
 ## Usage, samples
@@ -100,4 +100,5 @@ Real life usage with custom css class
 ----------
 
 ### License
+
 This project is open-sourced software licensed under the [MIT License](LICENSE.txt).
