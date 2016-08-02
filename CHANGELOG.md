@@ -2,9 +2,10 @@
 
 All notable changes to this project will be documented in this file.
 
-## Development
+## 1.0.7
 
 - Modify README, change installation directives
+- Add laravel 5.3 support to composer.json
 
 ## 1.0.6
 
