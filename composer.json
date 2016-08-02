@@ -7,10 +7,10 @@
     "homepage": "https://github.com/juy/ActiveMenu",
     "authors": [
         {
-            "name": "Sevdin Filiz",
-            "email": "sevdin.filiz@gmail.com",
-            "homepage": "http://www.juysoft.com",
-            "role": "Developer"
+            "name": "Juy Software",
+            "role": "Developer",
+            "email": "package@juysoft.com",
+            "homepage": "http://juysoft.com"
         }
     ],
     "support": {
@@ -18,8 +18,8 @@
         "docs": "https://github.com/juy/ActiveMenu/blob/master/README.md"
     },
     "require": {
-        "illuminate/support": "5.1.*|5.2.*",
-        "illuminate/routing": "5.1.*|5.2.*"
+        "illuminate/support": "5.1.*||5.2.*||5.3.*",
+        "illuminate/routing": "5.1.*||5.2.*||5.3.*"
     },
     "autoload": {
         "psr-4": {

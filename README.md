@@ -1,8 +1,8 @@
 # Active Menu laravel package
 
-[![Laravel](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.2-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.2-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
 
-> Helper class for Laravel applications to get active class base on current route name *(only detect route name not URL)*.
+> Helper class for Laravel applications to get active class base on current route name *(only detect "route name" not URL)*.
 
 ----------
 
@@ -10,11 +10,25 @@
 
 ### Composer package
 
-Add this package to your `composer.json` file and run `composer update` once.
+#### Install
 
-```json
-"juy/active-menu": "1.*"
 ```
+composer require juy/active-menu:1.*
+```
+
+#### Remove
+
+```
+composer remove juy/active-menu
+```
+
+> #### Manual install (Alternative)
+
+> Add this package to your `composer.json` file and run `composer update` once.
+
+> ```json
+>"juy/active-menu": "1.*"
+>```
 
 ### Service provider
 
