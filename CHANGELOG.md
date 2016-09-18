@@ -2,13 +2,16 @@
 
 All notable changes to this project will be documented in this file. This project is versioned under the [Semantic Versioning](http://semver.org/) guidelines.
 
+## Development
+
+- Change $this->currentRoute to $this->currentRouteName
+- Remove compareDotArrays() completely and use laravel str_is
+- Change function param $route to $routePattern
+
 ## v1.0.7
 
 - Modify README, change installation directives
 - Add laravel 5.3 support to composer.json
-- Change $this->currentRoute to $this->currentRouteName
-- Remove compareDotArrays() completely and use laravel str_is
-- Change function param $route to $routePattern
 
 ## v1.0.6
 
