@@ -2,7 +2,7 @@
 
 [![Laravel](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.2-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
 
-> Helper class for Laravel applications to get active class base on current route name *(only detect "route name" not URL)*.
+> Helper class for Laravel applications to get active class base on current route name *(It's only detect "route name, this is enough for us.")*.
 
 ----------
 
@@ -54,6 +54,21 @@ Publish config file.
 php artisan vendor:publish --provider="Juy\ActiveMenu\ServiceProvider" --tag="config"
 ```
 
+### Change config
+
+You can modify css active class with custom one *(default is 'active')* in `config/activemenu.php` *(After publish)*.
+
+
+```php
+return [
+
+    // The default css class value if the request match given route name
+    'class' => 'active',
+
+];
+```
+
+
 ## Usage, samples
 
 Alias/Facade
@@ -74,12 +89,6 @@ Helper function
 active_route('route.name');
 ```
 
-You can modify css active class with custom one (default is 'active')
-
-```php
-active_route('admin.dropdown', 'open')
-```
-
 Wildcard samples
 
 ```php
@@ -94,6 +103,8 @@ Active::route(['route.name1.*', 'route.name2.*']);
 active_route(['route.name1.*', 'route.name2.*']);
 
 ```
+
+----------
 
 Real life usage
 
