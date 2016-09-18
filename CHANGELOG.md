@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. This projec
 
 - Modify README, change installation directives
 - Add laravel 5.3 support to composer.json
+- Change $this->currentRoute to $this->currentRouteName
 
 ## v1.0.6
 

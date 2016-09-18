@@ -9,16 +9,16 @@ class Active
      *
      * @var Route
      */
-    protected $currentRoute;
+    protected $currentRouteName;
 
     /**
      * Active constructor
      *
-     * @param $currentRoute
+     * @param $currentRouteName
      */
-    public function __construct($currentRoute)
+    public function __construct($currentRouteName)
     {
-        $this->currentRoute = $currentRoute;
+        $this->currentRouteName = $currentRouteName;
     }
 
     /**
@@ -41,7 +41,7 @@ class Active
 
         foreach ($route as $value)
         {
-            if ($this->compareDotArrays($value, $this->currentRoute))
+            if ($this->compareDotArrays($value, $this->currentRouteName))
             {
                 $match = true;
                 break;
