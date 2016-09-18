@@ -123,7 +123,7 @@ Custom blade directive
 Real life usage
 
 ```php
-<li class="{{ active_route('admin.index') }}">
+<li class="item {{ active_route('admin.index') }}">
     <a href="admin/index">Dashboard</a>
 </li>
 ```
