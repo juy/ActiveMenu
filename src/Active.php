@@ -25,22 +25,22 @@ class Active
      * Active class
      * If route matches given route (or array of routes) return active
      *
-     * @param        $route
+     * @param        $routePattern
      * @param string $class
      *
      * @return string
      */
-    public function route($route, $class = 'active')
+    public function route($routePattern, $class = 'active')
     {
         // Convert to array
-        if (!is_array($route))
+        if (!is_array($routePattern))
         {
-            $route = explode(' ', $route);
+            $routePattern = explode(' ', $routePattern);
         }
 
         // Check the current route name
         // https://laravel.com/docs/5.3/helpers#method-str-is
-        foreach ((array) $route as $i)
+        foreach ((array) $routePattern as $i)
         {
             if (str_is($i, $this->currentRouteName))
             {

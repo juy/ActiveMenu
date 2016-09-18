@@ -6,13 +6,13 @@ if (!function_exists('active_route'))
      * Active route
      * If route matches given route (or array of routes) return active
      *
-     * @param $route
+     * @param $routePattern
      * @param string $class
      *
      * @return string
      */
-    function active_route($route, $class = 'active')
+    function active_route($routePattern, $class = 'active')
     {
-        return app('active')->route($route, $class);
+        return app('active')->route($routePattern, $class);
     }
 }
