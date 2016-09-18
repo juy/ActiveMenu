@@ -1,10 +1,14 @@
 # Active Menu laravel package
 
-[![Laravel](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.2-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-5.3.*-orange.svg?style=flat-square)](http://laravel.com) [![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt) [![Latest Version](https://img.shields.io/github/release/juy/ActiveMenu.svg?style=flat-square&label=latest version)](https://github.com/juy/ActiveMenu/tags)
 
-> Helper class for Laravel applications to get active class base on current route name *(only detect "route name" not URL)*.
+> Helper class for Laravel applications to get active class base on current route name *(It's only detect "route name, this is enough for us.")*.
 
 ----------
+
+## Supported Laravel versions
+
+- Laravel **5.1** / **5.2** / **5.3** (master branch this branch)
 
 ## Installation
 
@@ -13,7 +17,7 @@
 #### Install
 
 ```
-composer require juy/active-menu:1.*
+composer require juy/active-menu:1.1.*
 ```
 
 #### Remove
@@ -27,7 +31,7 @@ composer remove juy/active-menu
 > Add this package to your `composer.json` file and run `composer update` once.
 
 > ```json
->"juy/active-menu": "1.*"
+>"juy/active-menu": "1.1.*"
 >```
 
 ### Service provider
@@ -54,6 +58,21 @@ Publish config file.
 php artisan vendor:publish --provider="Juy\ActiveMenu\ServiceProvider" --tag="config"
 ```
 
+### Change config
+
+You can modify css active class with custom one *(default is 'active')* in `config/activemenu.php` *(After publish)*.
+
+
+```php
+return [
+
+    // The default css class value if the request match given route name
+    'class' => 'active',
+
+];
+```
+
+
 ## Usage, samples
 
 Alias/Facade
@@ -74,12 +93,6 @@ Helper function
 active_route('route.name');
 ```
 
-You can modify css active class with custom one (default is 'active')
-
-```php
-active_route('admin.dropdown', 'open')
-```
-
 Wildcard samples
 
 ```php
@@ -94,6 +107,18 @@ Active::route(['route.name1.*', 'route.name2.*']);
 active_route(['route.name1.*', 'route.name2.*']);
 
 ```
+
+Custom blade directive
+
+```
+@ifActiveRoute('route.name')
+    <p>Foo</p>
+@else
+    <p>Bar</p>
+@endif
+```
+
+----------
 
 Real life usage
 

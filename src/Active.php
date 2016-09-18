@@ -9,98 +9,43 @@ class Active
      *
      * @var Route
      */
-    protected $currentRoute;
+    protected $currentRouteName;
 
     /**
      * Active constructor
      *
-     * @param $currentRoute
+     * @param $currentRouteName
      */
-    public function __construct($currentRoute)
+    public function __construct($currentRouteName)
     {
-        $this->currentRoute = $currentRoute;
+        $this->currentRouteName = $currentRouteName;
     }
 
     /**
      * Active class
-     * If route matches given route (or array of routes) return active
+     * If route matches given route (or array of routes) return active class
      *
-     * @param        $route
-     * @param string $class
+     * @param $routePattern
      *
      * @return string
      */
-    public function route($route, $class = 'active')
+    public function route($routePattern)
     {
-        if (!is_array($route))
+        // Convert to array
+        if (!is_array($routePattern))
         {
-            $route = explode(' ', $route);
+            $routePattern = explode(' ', $routePattern);
         }
 
-        $match = false;
-
-        foreach ($route as $value)
+        // Check the current route name
+        // https://laravel.com/docs/5.3/helpers#method-str-is
+        foreach ((array) $routePattern as $i)
         {
-            if ($this->compareDotArrays($value, $this->currentRoute))
+            if (str_is($i, $this->currentRouteName))
             {
-                $match = true;
-                break;
+                return config('activemenu.class');
             }
         }
-
-        return $match ? $class : '';
     }
 
-    /**
-     * Compare two dot notation values. Accepts '*' as wildcard
-     *
-     * @param $dot1
-     * @param $dot2
-     *
-     * @return bool
-     */
-    protected function compareDotArrays($dot1, $dot2)
-    {
-        $array1 = explode('.', $dot1);
-        $array2 = explode('.', $dot2);
-
-        if (count($array1) > count($array2))
-        {
-            $count = count($array1);
-        }
-        else
-        {
-            $count = count($array2);
-        }
-
-        $match = true;
-
-        for ($i = 0; $i < $count; $i++)
-        {
-            if (!isset($array2[$i]))
-            {
-                if ($array1[$i] !== '*')
-                {
-                    $match = false;
-                }
-                break;
-            }
-
-            if (!isset($array1[$i]))
-            {
-                if ($array1[$i - 1] !== '*')
-                {
-                    $match = false;
-                }
-                break;
-            }
-
-            if ($array1[$i] !== $array2[$i] && $array1[$i] !== '*')
-            {
-                $match = false;
-            }
-        }
-
-        return $match;
-    }
 }

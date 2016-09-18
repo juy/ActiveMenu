@@ -3,8 +3,13 @@
     "description": "The helper class for Laravel applications to get active class base on current route name",
     "keywords": ["laravel", "active", "menu", "class"],
     "license": "MIT",
-    "type": "library",
+    "type": "laravel-package",
     "homepage": "https://github.com/juy/ActiveMenu",
+    "support": {
+        "source": "https://github.com/juy/ActiveMenu",
+        "issues": "https://github.com/juy/ActiveMenu/issues",
+        "docs": "https://github.com/juy/ActiveMenu/blob/master/README.md"
+    },
     "authors": [
         {
             "name": "Juy Software",
@@ -13,10 +18,6 @@
             "homepage": "http://juysoft.com"
         }
     ],
-    "support": {
-        "issues": "https://github.com/juy/ActiveMenu/issues",
-        "docs": "https://github.com/juy/ActiveMenu/blob/master/README.md"
-    },
     "require": {
         "illuminate/support": "5.1.*||5.2.*||5.3.*",
         "illuminate/routing": "5.1.*||5.2.*||5.3.*"
@@ -28,5 +29,7 @@
         "files": [
             "src/helpers.php"
         ]
-    }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
 }
