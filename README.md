@@ -1,10 +1,14 @@
 # Active Menu laravel package
 
-[![Laravel](https://img.shields.io/badge/Laravel-5.1-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.2-orange.svg?style=flat-square)](http://laravel.com) [![Laravel](https://img.shields.io/badge/Laravel-5.3-orange.svg?style=flat-square)](http://laravel.com)
+[![Laravel](https://img.shields.io/badge/Laravel-5.3.*-orange.svg?style=flat-square)](http://laravel.com) [![Latest Version](https://img.shields.io/github/release/juy/ActiveMenu.svg?style=flat-square&label=latest version)](https://github.com/juy/ActiveMenu/tags) [![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
 
 > Helper class for Laravel applications to get active class base on current route name *(It's only detect "route name, this is enough for us.")*.
 
 ----------
+
+## Supported Laravel versions
+
+- Laravel **5.1** / **5.2** / **5.3** (master branch this branch)
 
 ## Installation
 
@@ -13,7 +17,7 @@
 #### Install
 
 ```
-composer require juy/active-menu:1.*
+composer require juy/active-menu:1.1.*
 ```
 
 #### Remove
@@ -27,7 +31,7 @@ composer remove juy/active-menu
 > Add this package to your `composer.json` file and run `composer update` once.
 
 > ```json
->"juy/active-menu": "1.*"
+>"juy/active-menu": "1.1.*"
 >```
 
 ### Service provider
@@ -102,6 +106,16 @@ Multi route with wilcard
 Active::route(['route.name1.*', 'route.name2.*']);
 active_route(['route.name1.*', 'route.name2.*']);
 
+```
+
+Custom blade directive
+
+```
+@ifActiveRoute('route.name')
+    <p>Foo</p>
+@else
+    <p>Bar</p>
+@endif
 ```
 
 ----------
