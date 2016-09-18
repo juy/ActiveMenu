@@ -4,7 +4,7 @@ if (!function_exists('active_route'))
 {
     /**
      * Active route
-     * If route matches given route (or array of routes) return active
+     * If route matches given route (or array of routes) return active class
      *
      * @param $routePattern
      * @param string $class
