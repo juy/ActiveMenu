@@ -1,6 +1,6 @@
 # Active Menu laravel package
 
-[![Laravel](https://img.shields.io/badge/Laravel-5.3.*-orange.svg?style=flat-square)](http://laravel.com) [![Latest Version](https://img.shields.io/github/release/juy/ActiveMenu.svg?style=flat-square&label=latest version)](https://github.com/juy/ActiveMenu/tags) [![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE)
+[![Laravel](https://img.shields.io/badge/Laravel-5.3.*-orange.svg?style=flat-square)](http://laravel.com) [![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt) [![Latest Version](https://img.shields.io/github/release/juy/ActiveMenu.svg?style=flat-square&label=latest version)](https://github.com/juy/ActiveMenu/tags)
 
 > Helper class for Laravel applications to get active class base on current route name *(It's only detect "route name, this is enough for us.")*.
 
