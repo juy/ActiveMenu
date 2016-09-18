@@ -23,7 +23,7 @@ class Active
 
     /**
      * Active class
-     * If route matches given route (or array of routes) return active
+     * If route matches given route (or array of routes) return active class
      *
      * @param        $routePattern
      * @param string $class
