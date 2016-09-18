@@ -8,6 +8,7 @@ All notable changes to this project will be documented in this file. This projec
 - Remove compareDotArrays() completely and use laravel str_is()
 - Change function param $route to $routePattern
 - Move active class css name to a config file
+- Add custom blade directive @ifActiveRoute
 
 ## v1.0.7
 

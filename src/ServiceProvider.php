@@ -30,6 +30,11 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function boot()
     {
+        // Add custom blade directive @ifActiveUrl
+        \Blade::directive('ifActiveRoute', function($expression) {
+            return "<?php if (Active::route({$expression})): ?>";
+        });
+
         // Publish the config file
         $this->publishConfig();
     }
