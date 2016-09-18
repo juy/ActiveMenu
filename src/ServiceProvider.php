@@ -18,7 +18,7 @@ class ServiceProvider extends IlluminateServiceProvider
             __DIR__ . '/config/activemenu.php', 'activemenu'
         );
 
-        $this->app->singleton('active', function ($app) {
+        $this->app->singleton('active', function($app) {
            return new Active($app['router']->current()->getName());
         });
     }
