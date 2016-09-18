@@ -5,7 +5,7 @@ All notable changes to this project will be documented in this file. This projec
 ## Development
 
 - Change $this->currentRoute to $this->currentRouteName
-- Remove compareDotArrays() completely and use laravel str_is
+- Remove compareDotArrays() completely and use laravel str_is()
 - Change function param $route to $routePattern
 - Move active class css name to a config file
 
