@@ -128,14 +128,6 @@ Real life usage
 </li>
 ```
 
-Real life usage with custom css class
-
-```php
-<li class="{{ active_route('admin.index', 'open') }}">
-    <a href="admin/index">Dashboard</a>
-</li>
-```
-
 ----------
 
 ### License
