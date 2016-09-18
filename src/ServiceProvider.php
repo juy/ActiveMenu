@@ -13,11 +13,16 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function register()
     {
+        // Default package configuration
+        $this->mergeConfigFrom(
+            __DIR__ . '/config/activemenu.php', 'activemenu'
+        );
+
         $this->app->singleton('active', function ($app) {
-            return new Active($app['router']->current()->getName());
+           return new Active($app['router']->current()->getName());
         });
     }
-    
+
     /**
      * Perform post-registration booting of services.
      *
@@ -25,6 +30,19 @@ class ServiceProvider extends IlluminateServiceProvider
      */
     public function boot()
     {
-        //
+        // Publish the config file
+        $this->publishConfig();
     }
+
+    /**
+     * Publish the config file.
+     */
+    protected function publishConfig()
+    {
+        $this->publishes([
+            __DIR__ . '/config/activemenu.php' => config_path('activemenu.php')
+        ], 'config');
+    }
+
+
 }
