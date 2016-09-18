@@ -44,7 +44,6 @@ class Active
         {
             if (str_is($i, $this->currentRouteName))
             {
-                //return true;
                 return $class;
             }
         }
