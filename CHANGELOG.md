@@ -2,7 +2,7 @@
 
 All notable changes to this project will be documented in this file. This project is versioned under the [Semantic Versioning](http://semver.org/) guidelines.
 
-## 1.1.0
+## v1.1.0
 
 - Change $this->currentRoute to $this->currentRouteName
 - Remove compareDotArrays() completely and use laravel str_is()
