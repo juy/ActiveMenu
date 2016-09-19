@@ -15,7 +15,7 @@ class ServiceProvider extends IlluminateServiceProvider
     {
         // Default package configuration
         $this->mergeConfigFrom(
-            __DIR__ . '/config/activemenu.php', 'activemenu'
+            __DIR__ . '/../config/activemenu.php', 'activemenu'
         );
 
         $this->app->singleton('active', function($app) {
@@ -45,7 +45,7 @@ class ServiceProvider extends IlluminateServiceProvider
     protected function publishConfig()
     {
         $this->publishes([
-            __DIR__ . '/config/activemenu.php' => config_path('activemenu.php')
+            __DIR__ . '/../config/activemenu.php' => config_path('activemenu.php')
         ], 'config');
     }
 

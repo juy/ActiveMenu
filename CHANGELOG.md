@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. This project is versioned under the [Semantic Versioning](http://semver.org/) guidelines.
 
+## Development
+
+- Move config folder outside src directory
+
 ## v1.1.0
 
 - Change $this->currentRoute to $this->currentRouteName
