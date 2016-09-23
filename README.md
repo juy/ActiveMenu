@@ -8,33 +8,33 @@
 
 ## Supported Laravel versions
 
-- Laravel **5.1** / **5.2** / **5.3** (master branch this branch)
+- Laravel **5.1** / **5.2** / **5.3** (master branch)
 
 ## Installation
 
-### Composer package
+### Step:1 Install Through Composer
 
 #### Install
 
 ```
-composer require juy/active-menu:1.1.*
+➜ composer require juy/active-menu:1.1.*
 ```
 
 #### Remove
 
 ```
-composer remove juy/active-menu
+➜ composer remove juy/active-menu
 ```
 
 > #### Manual install (Alternative)
 
-> Add this package to your `composer.json` file and run `composer update` once.
+> Simply add the following to the "require" section of your composer.json file, and run `composer update` command.
 
 > ```json
 >"juy/active-menu": "1.1.*"
 >```
 
-### Service provider
+### Step 2: Add the Service Provider
 
 Append this line to your **service providers** array in `config/app.php`.
 
@@ -42,7 +42,7 @@ Append this line to your **service providers** array in `config/app.php`.
 Juy\ActiveMenu\ServiceProvider::class,
 ```
 
-### Alias
+### Step 3: Add Facade
 
 Append this line to your **aliases** array in `config/app.php`.
 
@@ -50,15 +50,15 @@ Append this line to your **aliases** array in `config/app.php`.
 'Active' => Juy\ActiveMenu\Facades\Active::class,
 ```
 
-### Publish config
+### Step 4: Publish Config
 
 Publish config file.
 
 ```
-php artisan vendor:publish --provider="Juy\ActiveMenu\ServiceProvider" --tag="config"
+➜ php artisan vendor:publish --provider="Juy\ActiveMenu\ServiceProvider" --tag="config"
 ```
 
-### Change config
+### Config Overview
 
 You can modify css active class with custom one *(default is 'active')* in `config/activemenu.php` *(After publish)*.
 

@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. This project is versioned under the [Semantic Versioning](http://semver.org/) guidelines.
 
+## v1.1.1
+
+- Move config folder outside src directory
+- Change config name to config.php
+- Service provider optimizations
+
 ## v1.1.0
 
 - Change $this->currentRoute to $this->currentRouteName

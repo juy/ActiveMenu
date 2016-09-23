@@ -6,6 +6,8 @@ use Illuminate\Support\Facades\Facade;
 
 /**
  * Active facade class
+ *
+ * @package Juy\ActiveMenu
  */
 class Active extends Facade
 {
