@@ -4,6 +4,11 @@ namespace Juy\ActiveMenu;
 
 use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
 
+/**
+ * Class ServiceProvider
+ * 
+ * @package Juy\ActiveMenu
+ */
 class ServiceProvider extends IlluminateServiceProvider
 {
     /**
