@@ -24,7 +24,7 @@ class ServiceProvider extends IlluminateServiceProvider
     }
 
     /**
-     * Perform post-registration booting of services.
+     * Perform post-registration booting of services
      *
      * @return void
      */
@@ -40,7 +40,7 @@ class ServiceProvider extends IlluminateServiceProvider
     }
 
     /**
-     * Publish the config file.
+     * Publish the config file
      */
     protected function publishConfig()
     {
