@@ -13,6 +13,13 @@ use Illuminate\Support\Facades\Blade;
 class ServiceProvider extends BaseServiceProvider
 {
     /**
+     * Package name
+     *
+     * @const string
+     */
+    const PACKAGE_NAME = 'activemenu';
+
+    /**
      * Indicates if loading of the provider is deferred
      *
      * @var bool
@@ -57,7 +64,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function mergeConfig()
     {
         $this->mergeConfigFrom(
-            $this->packagePath('config/config.php'), 'activemenu'
+            $this->packagePath('config/config.php'), self::PACKAGE_NAME
         );
     }
 
@@ -69,7 +76,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function publishConfig()
     {
         $this->publishes([
-            $this->packagePath('config/config.php') => config_path('activemenu.php')
+            $this->packagePath('config/config.php') => config_path(self::PACKAGE_NAME . '.php')
         ], 'config');
     }
 
