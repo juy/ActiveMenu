@@ -57,7 +57,7 @@ class ServiceProvider extends IlluminateServiceProvider
     protected function mergeConfig()
     {
         $this->mergeConfigFrom(
-            __DIR__ . '/../config/activemenu.php', 'activemenu'
+            $this->packagePath('config/activemenu.php'), 'activemenu'
         );
     }
 
@@ -69,7 +69,7 @@ class ServiceProvider extends IlluminateServiceProvider
     protected function publishConfig()
     {
         $this->publishes([
-            __DIR__ . '/../config/activemenu.php' => config_path('activemenu.php')
+            $this->packagePath('config/activemenu.php') => config_path('activemenu.php')
         ], 'config');
     }
 
@@ -84,6 +84,17 @@ class ServiceProvider extends IlluminateServiceProvider
         Blade::directive('ifActiveRoute', function($expression) {
             return "<?php if (Active::route({$expression})): ?>";
         });
+    }
+    
+    /**
+     * Loads a path relative to the package base directory
+     *
+     * @param string $path
+     * @return string
+     */
+    protected function packagePath($path = '')
+    {
+        return sprintf('%s/../%s', __DIR__, $path);
     }
 
 }
