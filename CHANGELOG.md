@@ -5,6 +5,8 @@ All notable changes to this project will be documented in this file. This projec
 ## Development
 
 - Move config folder outside src directory
+- Change config name to config.php
+- Service provider optimizations
 
 ## v1.1.0
 
