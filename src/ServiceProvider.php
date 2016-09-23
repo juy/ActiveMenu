@@ -23,6 +23,7 @@ class ServiceProvider extends IlluminateServiceProvider
         // Default package configuration
         $this->mergeConfig();
         
+        // Register singleton
         $this->app->singleton('active', function($app) {
            return new Active($app['router']->current()->getName());
         });
