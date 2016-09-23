@@ -2,7 +2,7 @@
 
 namespace Juy\ActiveMenu;
 
-use Illuminate\Support\ServiceProvider as IlluminateServiceProvider;
+use Illuminate\Support\ServiceProvider as BaseServiceProvider;
 use Illuminate\Support\Facades\Blade;
 
 /**
@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Blade;
  * 
  * @package Juy\ActiveMenu
  */
-class ServiceProvider extends IlluminateServiceProvider
+class ServiceProvider extends BaseServiceProvider
 {
     /**
      * Indicates if loading of the provider is deferred
