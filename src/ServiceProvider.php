@@ -57,7 +57,7 @@ class ServiceProvider extends IlluminateServiceProvider
     protected function mergeConfig()
     {
         $this->mergeConfigFrom(
-            $this->packagePath('config/activemenu.php'), 'activemenu'
+            $this->packagePath('config/config.php'), 'activemenu'
         );
     }
 
@@ -69,7 +69,7 @@ class ServiceProvider extends IlluminateServiceProvider
     protected function publishConfig()
     {
         $this->publishes([
-            $this->packagePath('config/activemenu.php') => config_path('activemenu.php')
+            $this->packagePath('config/config.php') => config_path('activemenu.php')
         ], 'config');
     }
 
