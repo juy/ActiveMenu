@@ -37,7 +37,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->mergeConfig();
         
         // Register singleton
-        $this->app->singleton('active', function($app) {
+        $this->app->singleton('active', function ($app) {
            return new Active($app['router']->current()->getName());
         });
     }
@@ -88,7 +88,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function registerBladeExtensions()
     {
         // Add custom blade directive @ifActiveUrl
-        Blade::directive('ifActiveRoute', function($expression) {
+        Blade::directive('ifActiveRoute', function ($expression) {
             return "<?php if (Active::route({$expression})): ?>";
         });
     }
