@@ -8,7 +8,7 @@
 
 ## Supported Laravel versions
 
-- Laravel **5.1** / **5.2** / **5.3** (master branch)
+- Laravel **5.1** / **5.2** / **5.3**
 
 ## Installation
 
