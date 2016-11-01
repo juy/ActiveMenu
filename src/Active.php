@@ -4,7 +4,7 @@ namespace Juy\ActiveMenu;
 
 /**
  * Class Active
- * 
+ *
  * @package Juy\Providers
  */
 class Active
