@@ -20,12 +20,6 @@
 ➜ composer require juy/active-menu:1.1.*
 ```
 
-#### Remove
-
-```
-➜ composer remove juy/active-menu
-```
-
 > #### Manual install (Alternative)
 
 > Simply add the following to the "require" section of your composer.json file, and run `composer update` command.
@@ -33,6 +27,12 @@
 > ```json
 >"juy/active-menu": "1.1.*"
 >```
+
+#### Remove
+
+```
+➜ composer remove juy/active-menu
+```
 
 ### Step 2: Add the Service Provider
 
