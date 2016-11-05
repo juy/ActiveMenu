@@ -2,6 +2,10 @@
 
 All notable changes to this project will be documented in this file. This project is versioned under the [Semantic Versioning](http://semver.org/) guidelines.
 
+## Development
+
+- Add .gitattributes, .editorconfig files
+
 ## v1.1.1
 
 - Move config folder outside src directory
