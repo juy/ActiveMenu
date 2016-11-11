@@ -15,9 +15,9 @@ class ServiceProvider extends BaseServiceProvider
     /**
      * Package name
      *
-     * @const string
+     * @var string
      */
-    const PACKAGE_NAME = 'activemenu';
+    protected $package = 'activemenu';
 
     /**
      * Indicates if loading of the provider is deferred
@@ -64,7 +64,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function mergeConfig()
     {
         $this->mergeConfigFrom(
-            $this->packagePath('config/config.php'), self::PACKAGE_NAME
+            $this->packagePath('config/config.php'), $this->package
         );
     }
 
@@ -76,7 +76,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function publishConfig()
     {
         $this->publishes([
-            $this->packagePath('config/config.php') => config_path(self::PACKAGE_NAME . '.php')
+            $this->packagePath('config/config.php') => config_path($this->package . '.php')
         ], 'config');
     }
 
