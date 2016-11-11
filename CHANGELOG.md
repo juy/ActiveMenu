@@ -5,6 +5,7 @@ All notable changes to this project will be documented in this file. This projec
 ## Development
 
 - Add .gitattributes, .editorconfig files
+- Add extra control to "Convert to array"
 
 ## v1.1.1
 

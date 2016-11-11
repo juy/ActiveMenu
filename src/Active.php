@@ -37,7 +37,7 @@ class Active
     public function route($routePattern = null)
     {
         // Convert to array
-        if (!is_array($routePattern))
+        if (!is_array($routePattern) && $routePattern != null)
         {
             $routePattern = explode(' ', $routePattern);
         }
