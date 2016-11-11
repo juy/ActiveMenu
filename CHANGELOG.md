@@ -5,7 +5,6 @@ All notable changes to this project will be documented in this file. This projec
 ## Development
 
 - Add .gitattributes, .editorconfig files
-- Fix route function to allow class name parameter
 
 ## v1.1.1
 
