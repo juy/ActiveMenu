@@ -31,10 +31,11 @@ class Active
      * If route matches given route (or array of routes) return active class
      *
      * @param $routePattern
+     * @param string $class
      *
      * @return string
      */
-    public function route($routePattern = null)
+    public function route($routePattern = null, $class = null)
     {
         // Convert to array
         if (!is_array($routePattern))
@@ -48,7 +49,7 @@ class Active
         {
             if (str_is($i, $this->currentRouteName))
             {
-                return config('activemenu.class');
+                return (isset($class)) ? $class : config('activemenu.class');
             }
         }
     }
