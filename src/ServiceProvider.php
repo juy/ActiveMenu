@@ -3,7 +3,6 @@
 namespace Juy\ActiveMenu;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Illuminate\Support\Facades\Blade;
 
 /**
  * Class ServiceProvider
@@ -88,7 +87,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function registerBladeExtensions()
     {
         // Add custom blade directive @ifActiveUrl
-        Blade::directive('ifActiveRoute', function ($expression) {
+        $this->app['blade.compiler']->directive('ifActiveRoute', function ($expression) {
             return "<?php if (Active::route({$expression})): ?>";
         });
     }

@@ -6,6 +6,7 @@ All notable changes to this project will be documented in this file. This projec
 
 - Add .gitattributes, .editorconfig files
 - Add extra control to "Convert to array"
+- Remove blade facede, use "blade.compiler" service container
 
 ## v1.1.1
 
