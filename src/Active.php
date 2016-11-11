@@ -34,7 +34,7 @@ class Active
      *
      * @return string
      */
-    public function route($routePattern)
+    public function route($routePattern = '')
     {
         // Convert to array
         if (!is_array($routePattern))
