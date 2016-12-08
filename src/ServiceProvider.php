@@ -86,7 +86,7 @@ class ServiceProvider extends BaseServiceProvider
      */
     protected function registerBladeExtensions()
     {
-        // Add custom blade directive @ifActiveUrl
+        // Add custom blade directive @ifActiveRoute
         $this->app['blade.compiler']->directive('ifActiveRoute', function ($expression) {
             return "<?php if (Active::route({$expression})): ?>";
         });
