@@ -31,8 +31,8 @@
             "src/helpers.php"
         ]
     },
-    "config": {
-        "sort-packages": true
+    "suggest": {
+        "juy/providers": "Load providers and aliases use a config file"
     },
     "minimum-stability": "dev",
     "prefer-stable": true
