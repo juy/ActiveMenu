@@ -19,8 +19,9 @@
         }
     ],
     "require": {
-        "illuminate/support": "5.1.*||5.2.*||5.3.*",
-        "illuminate/routing": "5.1.*||5.2.*||5.3.*"
+        "php": ">=5.5.9",
+        "illuminate/support": "^5.1",
+        "illuminate/routing": "^5.1"
     },
     "autoload": {
         "psr-4": {
@@ -29,6 +30,9 @@
         "files": [
             "src/helpers.php"
         ]
+    },
+    "suggest": {
+        "juy/providers": "Load providers and aliases use a config file"
     },
     "minimum-stability": "dev",
     "prefer-stable": true

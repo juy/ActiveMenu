@@ -1,9 +1,17 @@
 <?php
+/**
+ * This file is part of the <Active Menu> laravel package.
+ *
+ * @author Juy Software <package@juysoft.com>
+ * @copyright (c) 2016 Juy Software <package@juysoft.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Juy\ActiveMenu;
 
 use Illuminate\Support\ServiceProvider as BaseServiceProvider;
-use Illuminate\Support\Facades\Blade;
 
 /**
  * Class ServiceProvider
@@ -15,9 +23,9 @@ class ServiceProvider extends BaseServiceProvider
     /**
      * Package name
      *
-     * @const string
+     * @var string
      */
-    const PACKAGE_NAME = 'activemenu';
+    protected $package = 'activemenu';
 
     /**
      * Indicates if loading of the provider is deferred
@@ -37,7 +45,7 @@ class ServiceProvider extends BaseServiceProvider
         $this->mergeConfig();
         
         // Register singleton
-        $this->app->singleton('active', function($app) {
+        $this->app->singleton('active', function ($app) {
            return new Active($app['router']->current()->getName());
         });
     }
@@ -64,7 +72,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function mergeConfig()
     {
         $this->mergeConfigFrom(
-            $this->packagePath('config/config.php'), self::PACKAGE_NAME
+            $this->packagePath('config/config.php'), $this->package
         );
     }
 
@@ -76,7 +84,7 @@ class ServiceProvider extends BaseServiceProvider
     protected function publishConfig()
     {
         $this->publishes([
-            $this->packagePath('config/config.php') => config_path(self::PACKAGE_NAME . '.php')
+            $this->packagePath('config/config.php') => config_path($this->package . '.php')
         ], 'config');
     }
 
@@ -87,8 +95,8 @@ class ServiceProvider extends BaseServiceProvider
      */
     protected function registerBladeExtensions()
     {
-        // Add custom blade directive @ifActiveUrl
-        Blade::directive('ifActiveRoute', function($expression) {
+        // Add custom blade directive @ifActiveRoute
+        $this->app['blade.compiler']->directive('ifActiveRoute', function ($expression) {
             return "<?php if (Active::route({$expression})): ?>";
         });
     }

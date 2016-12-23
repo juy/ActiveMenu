@@ -1,11 +1,20 @@
 <?php
+/**
+ * This file is part of the <Active Menu> laravel package.
+ *
+ * @author Juy Software <package@juysoft.com>
+ * @copyright (c) 2016 Juy Software <package@juysoft.com>
+ *
+ * For the full copyright and license information, please view the LICENSE
+ * file that was distributed with this source code.
+ */
 
 namespace Juy\ActiveMenu;
 
 /**
  * Class Active
- * 
- * @package Juy\Providers
+ *
+ * @package Juy\ActiveMenu
  */
 class Active
 {
@@ -34,10 +43,10 @@ class Active
      *
      * @return string
      */
-    public function route($routePattern)
+    public function route($routePattern = null)
     {
         // Convert to array
-        if (!is_array($routePattern))
+        if (!is_array($routePattern) && $routePattern != null)
         {
             $routePattern = explode(' ', $routePattern);
         }
