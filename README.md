@@ -1,18 +1,18 @@
-# Active Menu laravel package
+# Active Menu Laravel Package
 
-[![Laravel](https://img.shields.io/badge/Laravel-5.3.*-orange.svg?style=flat-square)](http://laravel.com) [![Software License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt) [![Latest Version](https://img.shields.io/github/release/juy/ActiveMenu.svg?style=flat-square&label=latest version)](https://github.com/juy/ActiveMenu/tags)
+[![Latest version](https://img.shields.io/github/release/juy/ActiveMenu.svg?style=flat-square&label=Latest version)](https://github.com/juy/ActiveMenu/tags) [![Software license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt)
 
 > Helper class for Laravel applications to get active class base on current route name *(It's only detect "route name, this is enough for us.")*.
 
 ----------
 
-### Supported Laravel Versions
+### Supported Laravel versions
 
 - Laravel **5.1** | **5.2** | **5.3**
 
 ## Installation
 
-### Step:1 Install Through Composer
+### Step:1 Install through composer
 
 #### Install
 
@@ -20,7 +20,7 @@
 ➜ composer require juy/active-menu:1.1.*
 ```
 
-> #### Manual install (Alternative)
+> #### Manual install (alternative)
 
 > Simply add the following to the "require" section of your composer.json file, and run `composer update` command.
 
@@ -34,7 +34,7 @@
 ➜ composer remove juy/active-menu
 ```
 
-### Step 2: Add the Service Provider
+### Step 2: Add the service provider
 
 Append this line to your **service providers** array in `config/app.php`.
 
@@ -42,7 +42,7 @@ Append this line to your **service providers** array in `config/app.php`.
 Juy\ActiveMenu\ServiceProvider::class,
 ```
 
-### Step 3: Add Facade
+### Step 3: Add facade
 
 Append this line to your **aliases** array in `config/app.php`.
 
@@ -50,7 +50,7 @@ Append this line to your **aliases** array in `config/app.php`.
 'Active' => Juy\ActiveMenu\Facades\Active::class,
 ```
 
-### Step 4: Publish Config
+### Step 4: Publish config
 
 Publish config file.
 
@@ -58,9 +58,9 @@ Publish config file.
 ➜ php artisan vendor:publish --provider="Juy\ActiveMenu\ServiceProvider" --tag="config"
 ```
 
-### Config Overview
+### Config overview
 
-You can modify css active class with custom one *(default is 'active')* in `config/activemenu.php` *(After publish)*.
+You can modify css active class with custom one *(default is 'active')* in `config/activemenu.php` *(after publish)*.
 
 
 ```php
