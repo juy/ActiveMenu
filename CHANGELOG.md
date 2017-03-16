@@ -2,6 +2,11 @@
 
 All notable changes to this project will be documented in this file. This project is versioned under the [Semantic Versioning](http://semver.org/) guidelines.
 
+## v1.1.3
+
+- Add CLI control to ServiceProvider
+- Auto register Facade on ServiceProvider
+
 ## v1.1.2
 
 - Add extra control to "Convert to array"
