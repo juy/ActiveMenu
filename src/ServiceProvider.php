@@ -41,6 +41,12 @@ class ServiceProvider extends BaseServiceProvider
      */
     public function register()
     {
+        // If script is running CLI we don't activate this plugin
+        if ($this->app->runningInConsole())
+        {
+            return;
+        }
+
         // Default package configuration
         $this->mergeConfig();
         
@@ -48,6 +54,10 @@ class ServiceProvider extends BaseServiceProvider
         $this->app->singleton('active', function ($app) {
            return new Active($app['router']->current()->getName());
         });
+        
+        // Register Facade
+        $loader = \Illuminate\Foundation\AliasLoader::getInstance();
+        $loader->alias('Active', Facades\Active::class);
     }
 
     /**

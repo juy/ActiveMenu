@@ -1,14 +1,14 @@
 # Active Menu Laravel Package
 
-[![Latest version](https://img.shields.io/github/release/juy/ActiveMenu.svg?style=flat-square&label=Latest version)](https://github.com/juy/ActiveMenu/tags) [![Software license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](LICENSE.txt)
+[![Latest Version on Packagist][ico-version]][link-packagist] [![Software License][ico-license]](LICENSE.txt)
 
 > Helper class for Laravel applications to get active class base on current route name *(It's only detect "route name, this is enough for us.")*.
 
 ----------
 
-### Supported Laravel versions
+### Supported/Tested Laravel versions
 
-- Laravel **5.1** | **5.2** | **5.3**
+- Laravel **5.1** | **5.2** | **5.3** | **5.4**
 
 ### Requirements
 
@@ -23,7 +23,7 @@
 #### Install
 
 ```
-➜ composer require juy/active-menu:1.1.*
+➜ composer require juy/active-menu
 ```
 
 > #### Manual install (alternative)
@@ -31,7 +31,7 @@
 > Simply add the following to the "require" section of your composer.json file, and run `composer update` command.
 
 > ```json
->"juy/active-menu": "1.1.*"
+>"juy/active-menu": "^1.1"
 >```
 
 #### Remove
@@ -48,15 +48,7 @@ Append this line to your **service providers** array in `config/app.php`.
 Juy\ActiveMenu\ServiceProvider::class,
 ```
 
-### Step 3: Add facade
-
-Append this line to your **aliases** array in `config/app.php`.
-
-```php
-'Active' => Juy\ActiveMenu\Facades\Active::class,
-```
-
-### Step 4: Publish config
+### Step 3: Publish config
 
 Publish config file.
 
@@ -139,3 +131,9 @@ Real life usage
 ### License
 
 This project is open-sourced software licensed under the [MIT License](LICENSE.txt).
+
+
+[ico-version]: https://img.shields.io/packagist/v/juy/active-menu.svg?style=flat-square
+[link-packagist]: https://packagist.org/packages/juy/active-menu
+
+[ico-license]: https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square
