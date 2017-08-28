@@ -22,7 +22,10 @@ max_line_length = 120
 [*.php]
 curly_bracket_next_line = true
 
-[*.{yml,json}]
+[*.{php,js}]
+quote_type = single
+
+[*.{yml,yaml,json}]
 indent_size = 2
 
 [composer.json]
