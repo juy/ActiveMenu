@@ -2,7 +2,7 @@
 
 [![Latest Version on Packagist][ico-version]][link-packagist] [![Software License][ico-license]](LICENSE.txt)
 
-> Helper class for Laravel applications to get active class base on current route name *(It's only detect "route name, this is enough for us.")*.
+> Helper class for Laravel applications to get an "active CSS class", base on current route name *(It only detects route name)*.
 
 ----------
 
@@ -50,7 +50,7 @@ Juy\ActiveMenu\ServiceProvider::class,
 
 ### Step 3: Publish config
 
-Publish config file.
+Publish the config file.
 
 ```
 ➜ php artisan vendor:publish --provider="Juy\ActiveMenu\ServiceProvider" --tag="config"
@@ -98,7 +98,7 @@ Active::route('route.name.*');
 active_route('route.name.*');
 ```
 
-Multi route with wilcard
+Multi route with wildcard
 
 ```php
 Active::route(['route.name1.*', 'route.name2.*']);
@@ -118,7 +118,7 @@ Custom blade directive
 
 ----------
 
-Real life usage
+Real-life usage
 
 ```php
 <li class="item {{ active_route('admin.index') }}">
