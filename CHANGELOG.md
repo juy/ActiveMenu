@@ -1,3 +1,5 @@
+# Change log
+
 All notable changes to this project will be documented in this file. This project is versioned under the [Semantic Versioning](http://semver.org/) guidelines.
 
 ## v1.1.3
